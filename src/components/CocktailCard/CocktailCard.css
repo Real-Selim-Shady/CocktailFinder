@@ -47,4 +47,5 @@
     flex-direction: column;
     place-content: center;
     max-width: 90%;
+    align-self: center;
 }

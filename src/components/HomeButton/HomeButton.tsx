@@ -10,7 +10,7 @@ const HomeButton = ()=>{
 	return (
 		<>
 			<button className="home-button" onClick={()=>{navigate("/")}}>
-				<p>{"<"}</p>
+				<i className="fa-solid fa-house"></i>
 			</button>
 		</>
 	)

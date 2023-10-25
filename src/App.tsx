@@ -6,6 +6,7 @@ import SearchType from "./components/SearchType/SearchType";
 import HomeButton from "./components/HomeButton/HomeButton";
 import CocktailDetails from "./components/CocktailDetails/CocktailDetails";
 import AnimatedBackground from "./components/AnimatedBackground/AnimatedBackground";
+import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
 
 
 
@@ -19,8 +20,7 @@ function App() {
 				element={
 					<>
 						<AnimatedBackground />
-						<h1>Cocktail Finder</h1>
-						<span className="big-text">How will you find your cocktail?</span>
+						<h1 className="app-title">Cocktail Finder</h1>
 						<SearchType />
 					</>
 				}
@@ -30,9 +30,8 @@ function App() {
 				element={
 					<>
 						<AnimatedBackground />
-						<h1>Cocktail Finder</h1>
+						<h1 className="app-title">Cocktail Finder</h1>
 						<HomeButton />
-						<span>et c'est parti pour filtrer, go sur l'input et go filtrer</span>
 						<FilterButton />
 					</>
 				}
@@ -42,7 +41,7 @@ function App() {
 				element={
 					<>
 						<AnimatedBackground />
-						<h1>Cocktail Finder</h1>
+						<h1 className="app-title">Cocktail Finder</h1>
 						<HomeButton />
 						<CocktailDetails />
 					</>
@@ -53,8 +52,9 @@ function App() {
 				element={
 					<>
 						<AnimatedBackground />
+						<h1 className="app-title">Cocktail Finder</h1>
 						<HomeButton />
-						<p>Boulette!</p>
+						<ErrorMessage />
 					</>
 				}
 			/>

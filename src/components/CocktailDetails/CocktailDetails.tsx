@@ -3,6 +3,7 @@ import { addDrink, resetDrinks } from "../../utils/features/drinkSlice";
 import { useAppDispatch, useAppSelector } from "../../utils/store/store";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+import "./CocktailDetails.css";
 
 const CocktailDetails = ()=>{
 
@@ -34,61 +35,57 @@ const CocktailDetails = ()=>{
 	return (
 		<>
 			<section className="cocktail-details_block">
-				<p>You chose the {chosenCocktail?.strDrink} ? Very good choice</p>
-				<br/>
-				<p>Here is your cocktail</p>
-				<br/>
-				<img alt="cocktail-picture" src={chosenCocktail?.strDrinkThumb}></img>
-				<br/>
-				<ul>Here are the Ingredients:
-					<li>{chosenCocktail?.strIngredient1}</li>
+				<span>You chose the {chosenCocktail?.strDrink} ? Very good choice</span>
+				<span>Here is your cocktail</span>
+				<img alt="cocktail picture" className="cocktail-details-picture" src={chosenCocktail?.strDrinkThumb}></img>
+				<section className="ingredients-block">
+					<span>Here are the Ingredients:</span>
+					<span>{chosenCocktail?.strIngredient1}</span>
 					{
-						chosenCocktail?.strIngredient2 !== null && <li>{chosenCocktail?.strIngredient2}</li>
+						chosenCocktail?.strIngredient2 !== null && <span>{chosenCocktail?.strIngredient2}</span>
 					}
 					{
-						chosenCocktail?.strIngredient3 !== null && <li>{chosenCocktail?.strIngredient3}</li>
+						chosenCocktail?.strIngredient3 !== null && <span>{chosenCocktail?.strIngredient3}</span>
 					}
 					{
-						chosenCocktail?.strIngredient4 !== null && <li>{chosenCocktail?.strIngredient4}</li>
+						chosenCocktail?.strIngredient4 !== null && <span>{chosenCocktail?.strIngredient4}</span>
 					}
 					{
-						chosenCocktail?.strIngredient5 !== null && <li>{chosenCocktail?.strIngredient5}</li>
+						chosenCocktail?.strIngredient5 !== null && <span>{chosenCocktail?.strIngredient5}</span>
 					}
 					{
-						chosenCocktail?.strIngredient6 !== null && <li>{chosenCocktail?.strIngredient6}</li>
+						chosenCocktail?.strIngredient6 !== null && <span>{chosenCocktail?.strIngredient6}</span>
 					}
 					{
-						chosenCocktail?.strIngredient7 !== null && <li>{chosenCocktail?.strIngredient7}</li>
+						chosenCocktail?.strIngredient7 !== null && <span>{chosenCocktail?.strIngredient7}</span>
 					}
 					{
-						chosenCocktail?.strIngredient8 !== null && <li>{chosenCocktail?.strIngredient8}</li>
+						chosenCocktail?.strIngredient8 !== null && <span>{chosenCocktail?.strIngredient8}</span>
 					}
 					{
-						chosenCocktail?.strIngredient9 !== null && <li>{chosenCocktail?.strIngredient9}</li>
+						chosenCocktail?.strIngredient9 !== null && <span>{chosenCocktail?.strIngredient9}</span>
 					}
 					{
-						chosenCocktail?.strIngredient10 !== null && <li>{chosenCocktail?.strIngredient10}</li>
+						chosenCocktail?.strIngredient10 !== null && <span>{chosenCocktail?.strIngredient10}</span>
 					}
 					{
-						chosenCocktail?.strIngredient11 !== null && <li>{chosenCocktail?.strIngredient11}</li>
+						chosenCocktail?.strIngredient11 !== null && <span>{chosenCocktail?.strIngredient11}</span>
 					}
 					{
-						chosenCocktail?.strIngredient12 !== null && <li>{chosenCocktail?.strIngredient12}</li>
+						chosenCocktail?.strIngredient12 !== null && <span>{chosenCocktail?.strIngredient12}</span>
 					}
 					{
-						chosenCocktail?.strIngredient13 !== null && <li>{chosenCocktail?.strIngredient13}</li>
+						chosenCocktail?.strIngredient13 !== null && <span>{chosenCocktail?.strIngredient13}</span>
 					}
 					{
-						chosenCocktail?.strIngredient14 !== null && <li>{chosenCocktail?.strIngredient14}</li>
+						chosenCocktail?.strIngredient14 !== null && <span>{chosenCocktail?.strIngredient14}</span>
 					}
 					{
-						chosenCocktail?.strIngredient15 !== null && <li>{chosenCocktail?.strIngredient15}</li>
+						chosenCocktail?.strIngredient15 !== null && <span>{chosenCocktail?.strIngredient15}</span>
 					}
-				</ul>
+				</section>
 				<span>Instructions: {chosenCocktail?.strInstructions}</span>
-				<br/>
 				<span>Type of cocktail: {chosenCocktail?.strAlcoholic}</span>
-				<br/>
 				<span>Type of glass: {chosenCocktail?.strGlass}</span>
 			</section>
 		</>

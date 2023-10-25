@@ -44,7 +44,8 @@ const SearchType = ()=>{
 
 	return (
 		<>
-			<section className="cocktail-card_block">
+			<section className="search-type-block">
+				<span className="big-text">How will you find your cocktail?</span>
 				<button className="search-choice-button" onClick={setSearchTypeToName}>Search By Name</button>
 				<button className="search-choice-button" onClick={setSearchTypeToIngredient}>Search By Ingredient</button>
 				<button className="search-choice-button" onClick={setSearchTypeToId}>Search by ID</button>

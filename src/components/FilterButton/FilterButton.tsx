@@ -125,26 +125,28 @@ const FilterButton = ()=>{
 
 	return (
 		<>
-			<section className="cocktail-card_block">
-				{searchType == "Name" && <div className="search-by-name-block">
-					<label htmlFor="search-by-name">Search by Name</label>
+			<section className="cocktail-card-block">
+				{searchType == "Name" && <div className="search-block">
+					<label htmlFor="search-by-name">Alright, let's search by Name</label>
 					<input id="search-by-name" onChange={handleSearchInputChangeName} value={searchInput} />
 				</div>}
-				{searchType == "Ingredient" && <div className="search-by-ingredient-block">
-					<label htmlFor="search-by-ingredient">Search by Ingredient</label>
+				{searchType == "Ingredient" && <div className="search-block">
+					<label htmlFor="search-by-ingredient">Alright, let's search by Ingredient, you need the full name of it</label>
 					<input id="search-by-ingredient" onChange={handleSearchInputChangeIngredient} value={searchInput} />
 				</div>}
-				{searchType == "Id" && <div className="search-by-id-block">
-					<label htmlFor="search-by-id">Search by ID</label>
+				{searchType == "Id" && <div className="search-block">
+					<label htmlFor="search-by-id">Alright, let's search by ID, you need the full ID of it</label>
 					<input id="search-by-id" onChange={handleSearchInputChangeId} value={searchInput} />
 				</div>}
-				{searchType == "Alcoholic_Non-Alcoholic" && <div className="search-by-alcohol-block">
+				{searchType == "Alcoholic_Non-Alcoholic" && <div className="search-block">
 					<span >Chose with or without Alcohol</span>
-					<br/>
-					<button onClick={searchTheCocktailsByAlcoholic}>With</button>
-					<button onClick={searchTheCocktailsByNonAlcoholic}>Without</button>
+					<div className="with-without-block">
+						<button onClick={searchTheCocktailsByAlcoholic}>With</button>
+						<button onClick={searchTheCocktailsByNonAlcoholic}>Without</button>
+					</div>
 				</div>}
-				<span>Le résultat de la recherche s'affichera en dessous:</span>
+				{drinkList.length === 0 &&<span className="search-text">The result will be displayed under this text if any cocktail is found</span>}
+				{drinkList.length > 0 &&<span className="search-text">Here is a list of cocktail(s) corresponding your research:</span>}
 				<section className="cocktails-list">
 					{drinkList.map((drink)=>{
 						return (<CocktailCard key={drink.idDrink} drink={drink} />)
