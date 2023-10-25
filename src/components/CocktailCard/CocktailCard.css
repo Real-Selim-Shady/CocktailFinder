@@ -1,0 +1,50 @@
+
+.cocktail-card{
+    display: flex;
+    flex-direction: column;
+    width: 130px;
+    height: 180px;
+    margin: 5px;
+    background-color: #f0cece;
+    border-radius: 9px;
+    transition: transform 1s ease; 
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 50px 0 rgba(243, 98, 98, 0.5);
+}
+
+.cocktail-picture{
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    /*margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;*/    
+    margin-bottom: 5px;
+}
+
+.cocktail-title{
+    font-size: 15px;
+    color: black;
+}
+
+.cocktail-type{
+    font-size: 12px;
+    color: black;
+    padding-top: 5px;
+}
+
+
+.cocktail-card:hover {
+    transform: translateY(-5px); 
+}
+
+.card-text{
+    display: flex;
+    height: 50px;
+    flex-direction: column;
+    place-content: center;
+    max-width: 90%;
+}

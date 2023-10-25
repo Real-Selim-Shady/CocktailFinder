@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "./HomeButton.css"
 
 const HomeButton = ()=>{
 
@@ -9,7 +10,7 @@ const HomeButton = ()=>{
 	return (
 		<>
 			<button className="home-button" onClick={()=>{navigate("/")}}>
-				<p>Go to home page</p>
+				<p>{"<"}</p>
 			</button>
 		</>
 	)

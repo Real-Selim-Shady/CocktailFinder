@@ -5,6 +5,7 @@ import FilterButton from "./components/FilterButton/FilterButton";
 import SearchType from "./components/SearchType/SearchType";
 import HomeButton from "./components/HomeButton/HomeButton";
 import CocktailDetails from "./components/CocktailDetails/CocktailDetails";
+import AnimatedBackground from "./components/AnimatedBackground/AnimatedBackground";
 
 
 
@@ -17,7 +18,9 @@ function App() {
 				path='/'
 				element={
 					<>
-						<h1>C'est l'heure du f..f..f..f.f.Fiiiiiiiltre de cocktail</h1>
+						<AnimatedBackground />
+						<h1>Cocktail Finder</h1>
+						<span className="big-text">How will you find your cocktail?</span>
 						<SearchType />
 					</>
 				}
@@ -26,6 +29,7 @@ function App() {
 				path='/filter'
 				element={
 					<>
+						<AnimatedBackground />
 						<h1>Cocktail Finder</h1>
 						<HomeButton />
 						<span>et c'est parti pour filtrer, go sur l'input et go filtrer</span>
@@ -37,6 +41,7 @@ function App() {
 				path='/Cocktail/:id' //:id
 				element={
 					<>
+						<AnimatedBackground />
 						<h1>Cocktail Finder</h1>
 						<HomeButton />
 						<CocktailDetails />
@@ -47,6 +52,7 @@ function App() {
 				path='/*'
 				element={
 					<>
+						<AnimatedBackground />
 						<HomeButton />
 						<p>Boulette!</p>
 					</>

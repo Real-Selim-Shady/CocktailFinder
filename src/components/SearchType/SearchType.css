@@ -1,0 +1,17 @@
+
+.cocktail-card_block{
+    display:flex;
+    flex-direction: column;
+}
+
+.cocktail-card_block button{
+    background-color: transparent;
+    border: none;
+    color: antiquewhite;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.cocktail-card_block button:hover{
+    color: rgb(255, 123, 75);
+}

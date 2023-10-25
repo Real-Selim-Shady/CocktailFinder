@@ -2,6 +2,7 @@ import React from "react";
 import { useAppDispatch/*, useAppSelector */} from "../../utils/store/store";
 import { searchByType, SearchTypeState  } from "../../utils/features/searchTypeSlice";
 import { useNavigate } from "react-router-dom";
+import "./SearchType.css"
 
 const SearchType = ()=>{
 
@@ -44,13 +45,10 @@ const SearchType = ()=>{
 	return (
 		<>
 			<section className="cocktail-card_block">
-				<button onClick={setSearchTypeToName}>Search By Name</button>
-				<br/>
-				<button onClick={setSearchTypeToIngredient}>Search By Ingredient</button>
-				<br/>
-				<button onClick={setSearchTypeToId}>Search by ID</button>
-				<br/>
-				<button onClick={setSearchTypeToAlcoholicNonAlcoholic}>Search by Alcoholic/Non-Alcoholic</button>
+				<button className="search-choice-button" onClick={setSearchTypeToName}>Search By Name</button>
+				<button className="search-choice-button" onClick={setSearchTypeToIngredient}>Search By Ingredient</button>
+				<button className="search-choice-button" onClick={setSearchTypeToId}>Search by ID</button>
+				<button className="search-choice-button" onClick={setSearchTypeToAlcoholicNonAlcoholic}>Search by Alcoholic/Non-Alcoholic</button>
 			</section>
 		</>
 	)

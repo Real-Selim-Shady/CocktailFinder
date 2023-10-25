@@ -5,6 +5,7 @@ import { searchCharacters } from "../../utils/features/searchSlice";
 import axios from "axios";
 import CocktailCard from "../CocktailCard/CocktailCard";
 import { useNavigate } from "react-router-dom";
+import "./FilterButton.css"
 
 const FilterButton = ()=>{
 	const dispatch=useAppDispatch(); 
@@ -143,12 +144,12 @@ const FilterButton = ()=>{
 					<button onClick={searchTheCocktailsByAlcoholic}>With</button>
 					<button onClick={searchTheCocktailsByNonAlcoholic}>Without</button>
 				</div>}
-				<ul>
-					<p>Le résultat de la recherche s'affichera en dessous:</p>
+				<span>Le résultat de la recherche s'affichera en dessous:</span>
+				<section className="cocktails-list">
 					{drinkList.map((drink)=>{
 						return (<CocktailCard key={drink.idDrink} drink={drink} />)
 					})}
-				</ul>
+				</section>
 			</section>
 		</>
 	)

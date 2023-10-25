@@ -1,6 +1,7 @@
 import React,{/*useRef,*/ } from "react";
 import { Drink } from "../../utils/features/drinkSlice";
 import { useNavigate } from "react-router-dom";
+import "./CocktailCard.css"
 
 interface CocktailCardProps {
 	drink: Drink;
@@ -19,9 +20,13 @@ const CocktailCard: React.FC<CocktailCardProps> = ({ drink })=>{
 
 	return (
 		<>
-			{/*<section className="cocktail-card_block">*/}
-			<li onClick={()=>goToCocktailDetails(drinkId)}>{drink.strDrink}</li>
-			{/*</section>*/}
+			<div className="cocktail-card" onClick={()=>goToCocktailDetails(drinkId)}>
+				<img alt="cocktail picture" className="cocktail-picture" src={drink.strDrinkThumb}></img>
+				<div className="card-text">
+					<span className="cocktail-title">{drink.strDrink}</span>
+					<span className="cocktail-type">{drink.strAlcoholic}</span>
+				</div>
+			</div>
 		</>
 	)
 }
