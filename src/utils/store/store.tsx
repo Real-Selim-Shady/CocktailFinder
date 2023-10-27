@@ -5,6 +5,18 @@ import { TypedUseSelectorHook, useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { SearchTypeSlice } from "../features/searchTypeSlice";
 
+/*
+import { Drink } from "../features/drinkSlice";
+import { searchState } from "../features/searchSlice";
+import { SearchTypeState } from "../features/searchTypeSlice";
+
+
+export interface RootState {
+  drink: Drink;
+  search: searchState;
+  searchType: SearchTypeState;
+}*/
+
 export const store=configureStore({
 	reducer:{
 		drink: DrinkSlice.reducer,

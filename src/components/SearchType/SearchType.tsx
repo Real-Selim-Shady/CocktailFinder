@@ -4,7 +4,7 @@ import { searchByType, SearchTypeState  } from "../../utils/features/searchTypeS
 import { useNavigate } from "react-router-dom";
 import "./SearchType.css"
 
-const SearchType = ()=>{
+const SearchType: React.FC = ()=>{
 
 	const dispatch = useAppDispatch();
 	const navigate = useNavigate();

@@ -10,7 +10,7 @@ import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
 
 
 
-function App() {
+const App: React.FC = () => {
 
 
 	return (

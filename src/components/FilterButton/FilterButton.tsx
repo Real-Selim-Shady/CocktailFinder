@@ -22,28 +22,28 @@ const FilterButton = ()=>{
 	},[])
 
 	const searchTheCocktailsByName = (searchInput: string)=>{
-		axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchInput}`)
-			.then(response => {
-				//console.log("response.data",response.data.drinks);
-				dispatch(resetDrinks())
-				if(response.data.drinks !== null){
-					dispatch(addDrink(response.data.drinks))
-					if(searchInput == ""){
-						dispatch(resetDrinks())
+		dispatch(resetDrinks())
+		if(searchInput.length > 2){
+			axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchInput}`)
+				.then(response => {
+					if(response.data.drinks !== null){
+						dispatch(addDrink(response.data.drinks))
+						if(searchInput == ""){
+							dispatch(resetDrinks())
+						}
 					}
-				}
-			})
-			.catch(error => {
-				console.error(error);
-				console.log("searchInput",searchInput);
-			});
+				})
+				.catch(error => {
+					console.error(error);
+					console.log("searchInput",searchInput);
+				});
+		}
 	}
 
 	const searchTheCocktailsById = (searchInput: string)=>{
+		dispatch(resetDrinks())
 		axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${searchInput}`)
 			.then(response => {
-				////console.log("response.data",response.data.drinks);
-				dispatch(resetDrinks())
 				if(response.data.drinks !== null){
 					dispatch(addDrink(response.data.drinks))
 					if(searchInput == ""){
@@ -58,10 +58,9 @@ const FilterButton = ()=>{
 	}
 
 	const searchTheCocktailsByIngredient = (searchInput: string)=>{
+		dispatch(resetDrinks())
 		axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${searchInput}`)
 			.then(response => {
-				//console.log("response.data",response.data.drinks);
-				dispatch(resetDrinks())
 				if(response.data.drinks !== null){
 					dispatch(addDrink(response.data.drinks))
 					if(searchInput == ""){
@@ -76,10 +75,9 @@ const FilterButton = ()=>{
 	}
 
 	const searchTheCocktailsByAlcoholic = ()=>{
+		dispatch(resetDrinks())
 		axios.get("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic")
 			.then(response => {
-				//console.log("response.data",response.data.drinks);
-				dispatch(resetDrinks())
 				if(response.data.drinks !== null){
 					dispatch(addDrink(response.data.drinks))
 				}
@@ -90,10 +88,9 @@ const FilterButton = ()=>{
 	}
 
 	const searchTheCocktailsByNonAlcoholic = ()=>{
+		dispatch(resetDrinks())
 		axios.get("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic")
 			.then(response => {
-				//console.log("response.data",response.data.drinks);
-				dispatch(resetDrinks())
 				if(response.data.drinks !== null){
 					dispatch(addDrink(response.data.drinks))
 				}
