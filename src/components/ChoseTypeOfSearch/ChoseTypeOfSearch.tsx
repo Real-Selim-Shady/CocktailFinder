@@ -2,9 +2,9 @@ import React from "react";
 import { useAppDispatch/*, useAppSelector */} from "../../utils/store/store";
 import { searchByType, SearchTypeState  } from "../../utils/features/searchTypeSlice";
 import { useNavigate } from "react-router-dom";
-import "./SearchType.css"
+import "./ChoseTypeOfSearch.css"
 
-const SearchType: React.FC = ()=>{
+const ChoseTypeOfSearch: React.FC = ()=>{
 
 	const dispatch = useAppDispatch();
 	const navigate = useNavigate();
@@ -55,4 +55,4 @@ const SearchType: React.FC = ()=>{
 	)
 }
 
-export default SearchType;
+export default ChoseTypeOfSearch;

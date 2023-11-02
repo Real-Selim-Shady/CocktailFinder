@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import FilterButton from "./components/FilterButton/FilterButton";
-import SearchType from "./components/SearchType/SearchType";
+import FilterButton from "./components/FilterCocktails/FilterCocktails";
+import ChoseTypeOfSearch from "./components/ChoseTypeOfSearch/ChoseTypeOfSearch";
 import HomeButton from "./components/HomeButton/HomeButton";
 import CocktailDetails from "./components/CocktailDetails/CocktailDetails";
 import AnimatedBackground from "./components/AnimatedBackground/AnimatedBackground";
@@ -21,7 +21,7 @@ const App: React.FC = () => {
 					<>
 						<AnimatedBackground />
 						<h1 className="app-title">Cocktail Finder</h1>
-						<SearchType />
+						<ChoseTypeOfSearch />
 					</>
 				}
 			/>
@@ -37,7 +37,7 @@ const App: React.FC = () => {
 				}
 			/>
 			<Route 
-				path='/Cocktail/:id' //:id
+				path='/Cocktail/:id'
 				element={
 					<>
 						<AnimatedBackground />

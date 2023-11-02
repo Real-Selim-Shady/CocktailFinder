@@ -3,7 +3,7 @@ import { render, fireEvent } from "@testing-library/react";
 import { useNavigate } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./utils/store/store";
-import SearchType from "./components/SearchType/SearchType";
+import SearchType from "./components/ChoseTypeOfSearch/ChoseTypeOfSearch";
 
 jest.mock("react-router-dom");
 
@@ -91,8 +91,6 @@ test("bad response", () => {
 It is possible to specify the response code:
 
 axios.get.mockImplementation(() => Promise.resolve({ status: 200, data: {...} }));
-It is possible to change the mock based on the parameters:
-
 axios.get.mockImplementation((url) => {
     if (url === 'www.example.com') {
         return Promise.resolve({ data: {...} });

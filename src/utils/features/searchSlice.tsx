@@ -1,7 +1,6 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit"
 
 
-
 export interface searchState{
     searchInput: string
 }
