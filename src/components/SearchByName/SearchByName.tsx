@@ -30,8 +30,9 @@ const SearchByName = ()=>{
 		<>
 
 			{searchType == "Name" && <div className="search-block">
-				<label htmlFor="search-by-name">Alright, let's search by Name</label>
-				<input id="search-by-name" onChange={handleSearchInputChangeName} value={searchInput} />
+				<label htmlFor="search-by-name">Alright, let's search by Name
+					<input id="search-by-name" onChange={handleSearchInputChangeName} value={searchInput} data-testid="search-input" />
+				</label>
 			</div>}
 		</>
 	)

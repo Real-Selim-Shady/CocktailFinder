@@ -6,5 +6,7 @@ module.exports = {
 	moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node", "css"],
 	moduleNameMapper: {
 		"\\.css$": "identity-obj-proxy",
+		//"axios": "axios/dist/axios.cjs",
 	},
+	transformIgnorePatterns: ["node_modules/ (?!axios)"],
 };
